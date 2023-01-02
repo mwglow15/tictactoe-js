@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 1px solid black;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  background-color: cornflowerblue;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.game-container {
+  background-color: white;
+  width: 70%;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+}
+
+.title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.scores {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gameboard {
+  height: 70%;
+  display: grid;
+  grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr;
+  grid-gap: 3px;
+  background-color: darkgray;
+}
