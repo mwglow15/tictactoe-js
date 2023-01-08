@@ -4,22 +4,52 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Tic Tac Toe</title>
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
 <body>
 <div class="game-container">
   <div class="header">
-    <div class="logo"></div>
     <div class="title">Tic Tac Toe</div>
-    <div class="scores">
-      <div class="player1-score"> <span class="player1-name">Player 1</span>:<span class="player1-score-num">3</span> </div>
-      <div class="player2-score"> <span class="player2-name">Player 2</span>:<span class="player2-score-num">2</span> </div>
+    <div class="symbols">
+      <p>Choose your symbol:</p>
+      <div class="symbol-buttons">
+        <button class="symbol x">X</button>
+        <button class="symbol o">O</button>
+      </div>
     </div>
   </div>
-  <div class="gameboard"></div>
-  <div class="next-turn"></div>
+  <div class="gameboard">
+    <div class="board">
+      <p></p>
+    </div>
+    <div class="board">
+      <p></p>
+    </div>
+    <div class="board">
+      <p></p>
+    </div>
+    <div class="board">
+      <p></p>
+    </div>
+    <div class="board">
+      <p></p>
+    </div>
+    <div class="board">
+      <p></p>
+    </div>
+    <div class="board">
+      <p></p>
+    </div>
+    <div class="board">
+      <p></p>
+    </div>
+    <div class="board">
+      <p></p>
+    </div>
+  </div>
+  <div class="result"></div>
 </div>
 </body>
 </html>

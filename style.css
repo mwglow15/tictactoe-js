@@ -1,7 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  border: 1px solid black;
+  /*border: 1px solid black;*/
 }
 
 body {
@@ -17,6 +17,7 @@ body {
   padding: 15px;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .header {
@@ -24,12 +25,14 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 15px;
+  width: 70%;
 }
 
 .title {
   text-align: center;
   font-size: 2rem;
   font-weight: bold;
+  margin: 0 
 }
 
 .scores {
@@ -40,14 +43,35 @@ body {
 
 .gameboard {
   height: 70%;
+  width: 70%;
   display: grid;
   grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr;
   grid-gap: 3px;
   background-color: darkgray;
+  margin-top: 30px;
 }
 
-.tile {
+.board {
+  display: flex;
+}
+
+.board {
   background-color: white;
   font-size: 6rem;
   text-align: center;
+}
+
+.symbols {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 300px;
+}
+.symbol-buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 80px;
+  height: 50px;
+
 }
