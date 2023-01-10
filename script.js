@@ -1,23 +1,28 @@
 const gameboard = document.querySelector(".gameboard")
 
 const Gameboard = () => {
-  let board = [null,'X',null,'O',null,'O',null,null,null]
+  let board = new Array(9)
 
-  const updateBoard = () => {
-    while (gameboard.firstChild) {
-      gameboard.removeChild(gameboard.firstChild)
-    }
-    board.forEach(mark => {
-      const tile = document.createElement('div')
-      tile.classList.add('tile')
-      tile.textContent = mark
-
-      gameboard.appendChild(tile)
-    })
-  }
-
-  return {board, updateBoard}
+  return {board}
 }
 
-const game = Gameboard()
-game.updateBoard()
+const Player = (symbol) => {
+  const playerSymbol = symbol
+
+  const getSymbol = () => playerSymbol
+
+  const setSymbol = (sign) => {
+    playerSymbol = sign
+  }
+
+  return {getSymbol, setSymbol}
+}
+
+const gameController = (() => {
+  
+
+})
+
+const displayController = (() => {
+
+})
