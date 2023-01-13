@@ -43,7 +43,7 @@ body {
 
 .gameboard {
   height: 70%;
-  width: 70%;
+  width: 50%;
   display: grid;
   grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr;
   grid-gap: 3px;
@@ -67,6 +67,7 @@ body {
   justify-content: space-between;
   width: 300px;
 }
+
 .symbol-buttons {
   display: flex;
   flex-direction: column;
@@ -74,4 +75,13 @@ body {
   width: 80px;
   height: 50px;
 
+}
+
+.restart {
+  font-size: 2rem;
+  margin: 25px 0;
+  padding: 10px;
+  background-color: khaki;
+  border: 1.5px solid grey;
+  border-radius: 10px;
 }
