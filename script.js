@@ -38,6 +38,7 @@ const gameController = (() => {
 
   const makeMove = (i) => {
     Gameboard.addSign(i, player)
+    this.removeEventListener('click',  () => gameController.changeSign.bind(this))
   }
 
   return {changeSign, makeMove}
@@ -58,7 +59,7 @@ const displayController = (() => {
   }
   const initialize = (() => {
     for (let i=0; i<board.length; i++) {
-      board[i].addEventListener('click', gameController.makeMove.bind(this, i))
+      board[i].addEventListener('click', gameController.makeMove.bind(this, i), {once: true})
     }
 
     x.addEventListener('click', () => gameController.changeSign.bind(this))
