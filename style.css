@@ -59,6 +59,8 @@ body {
   background-color: white;
   font-size: 6rem;
   text-align: center;
+  display: flex;
+  justify-content: center;
 }
 
 .symbols {

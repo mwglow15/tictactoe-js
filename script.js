@@ -31,6 +31,7 @@ const Player = (symbol) => {
 const gameController = (() => {
   const player = Player('X')
   const computer = Player('O')
+  const board = Array.from(document.querySelectorAll('div.board'))
 
   const changeSign = (button) => {
     
@@ -38,9 +39,21 @@ const gameController = (() => {
 
   const makeMove = (i) => {
     Gameboard.addSign(i, player)
-    this.removeEventListener('click',  () => gameController.changeSign.bind(this))
+    computerMove()
   }
 
+  const computerMove = () => {
+    let notPlaced = true
+    do {
+      let num = Math.floor(Math.random() * 10)
+      if (Gameboard.board[num]) {
+        //Skip
+      } else {
+        notPlaced = false
+        Gameboard.addSign(num, computer)
+      }
+    } while(notPlaced)
+  }
   return {changeSign, makeMove}
 })()
 
