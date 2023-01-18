@@ -9,11 +9,22 @@ const Gameboard = (() => {
     board[num] = player.getSymbol()
   }
 
+  const getAvailableTiles = () => {
+    const tiles = new Array()
+    for (let i=0; i < board.length; i++) {
+      if (!board[i]) {
+        tiles.push(i)
+      }
+    }
+
+    return tiles;
+  }
+
   const reset = () => {
     board = new Array(9)
   }
 
-  return {board, getSpot, addSign, reset}
+  return {getSpot, addSign, reset, getAvailableTiles}
 })()
 
 const Player = (symbol) => {
@@ -39,21 +50,20 @@ const gameController = (() => {
 
   const makeMove = (i) => {
     Gameboard.addSign(i, player)
-    computerMove()
+    Gameboard.computerMove()
+  }
+
+  const checkEnd = () => {
+    
   }
 
   const computerMove = () => {
-    let notPlaced = true
-    do {
-      let num = Math.floor(Math.random() * 10)
-      if (Gameboard.board[num]) {
-        //Skip
-      } else {
-        notPlaced = false
-        Gameboard.addSign(num, computer)
-      }
-    } while(notPlaced)
+    const empty = Gameboard.getAvailableTiles()
+    let idx = Math.floor(Math.random() * empty.length)
+    let num = empty[idx]
+    Gameboard.addSign(num, computer)
   }
+
   return {changeSign, makeMove}
 })()
 
