@@ -50,11 +50,11 @@ const gameController = (() => {
 
   const makeMove = (i) => {
     Gameboard.addSign(i, player)
-    Gameboard.computerMove()
+    computerMove()
   }
 
   const checkEnd = () => {
-    
+
   }
 
   const computerMove = () => {
