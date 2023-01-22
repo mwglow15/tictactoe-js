@@ -9,48 +9,56 @@
   <script src="script.js" defer></script>
 </head>
 <body>
-<div class="game-container">
-  <div class="header">
-    <div class="title">Tic Tac Toe</div>
-    <div class="symbols">
-      <p>Choose your symbol:</p>
-      <div class="symbol-buttons">
-        <button class="symbol x">X</button>
-        <button class="symbol o">O</button>
+  <div class="winner-background hide">
+    <div class="winner-container ">
+      <p class="winner declaration hide">The winner is:</p>
+      <p class="tie declaration hide">It's a draw</p>
+      <p class="winner player x hide">X</p>
+      <p class="winner player o hide">O</p>
+    </div>
+  </div>
+  <div class="game-container">
+    <div class="header">
+      <div class="title">Tic Tac Toe</div>
+      <div class="symbols">
+        <p>Choose your symbol:</p>
+        <div class="symbol-buttons">
+          <button class="symbol x">X</button>
+          <button class="symbol o">O</button>
+        </div>
       </div>
     </div>
+    <div class="gameboard">
+      <div class="board">
+        <p></p>
+      </div>
+      <div class="board">
+        <p></p>
+      </div>
+      <div class="board">
+        <p></p>
+      </div>
+      <div class="board">
+        <p></p>
+      </div>
+      <div class="board">
+        <p></p>
+      </div>
+      <div class="board">
+        <p></p>
+      </div>
+      <div class="board">
+        <p></p>
+      </div>
+      <div class="board">
+        <p></p>
+      </div>
+      <div class="board">
+        <p></p>
+      </div>
+    </div>
+    <div class="restart">RESTART</div>
+    <div class="result"></div>
   </div>
-  <div class="gameboard">
-    <div class="board">
-      <p></p>
-    </div>
-    <div class="board">
-      <p></p>
-    </div>
-    <div class="board">
-      <p></p>
-    </div>
-    <div class="board">
-      <p></p>
-    </div>
-    <div class="board">
-      <p></p>
-    </div>
-    <div class="board">
-      <p></p>
-    </div>
-    <div class="board">
-      <p></p>
-    </div>
-    <div class="board">
-      <p></p>
-    </div>
-    <div class="board">
-      <p></p>
-    </div>
-  </div>
-  <div class="restart">RESTART</div>
-  <div class="result"></div>
-</div>
 </body>
 </html>
